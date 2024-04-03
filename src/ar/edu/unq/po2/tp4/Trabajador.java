@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class Trabajador {
 	
 	private ArrayList<Ingreso> ingresosPercibidos = new ArrayList<Ingreso>();
+	
+	public void agregarIngreso(Ingreso ingreso) {
+		ingresosPercibidos.add(ingreso);
+	}
 
 	public double getTotalPercibido() {
 		double totalPercibido = 0;
