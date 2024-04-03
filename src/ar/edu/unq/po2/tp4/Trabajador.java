@@ -15,11 +15,15 @@ public class Trabajador {
 	}
 	
 	public double getMontoImponible() {
-		
+		double totalImponible = 0;
+		for (Ingreso i : ingresosPercibidos) {
+			totalImponible += i.getMontoImponible();
+	    }
+		return totalImponible;
 	}
 	
 	public double getImpuestoAPagar() {
-		return this.getMontoImponible() * 0.8;
+		return this.getMontoImponible() * 0.02;
 	}
 	
 }

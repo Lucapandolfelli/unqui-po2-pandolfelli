@@ -10,8 +10,8 @@ public class IngresoPorHorasExtras extends Ingreso {
 	}
 	
 	@Override
-	public double montoImponible() {
-		
+	public double getMontoImponible() {
+		return 0;
 	}
 
 }
