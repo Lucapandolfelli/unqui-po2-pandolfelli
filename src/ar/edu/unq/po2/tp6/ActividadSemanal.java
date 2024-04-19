@@ -3,18 +3,18 @@ package ar.edu.unq.po2.tp6;
 public class ActividadSemanal {
 	
 	private DiaDeLaSemana diaDeLaSemana;
-	private int horaInicio;
+	private int hora;
 	private int duracion;
 	private Deporte deporte;
 	
-	public ActividadSemanal(DiaDeLaSemana diaDeLaSemana, int horaInicio, int duracion, Deporte deporte) {
+	public ActividadSemanal(DiaDeLaSemana diaDeLaSemana, int hora, int duracion, Deporte deporte) {
 		this.diaDeLaSemana = diaDeLaSemana;
-		this.horaInicio = horaInicio;
+		this.hora = hora;
 		this.duracion = duracion;
 		this.deporte = deporte;
 	}
 
-	public int coste() {
+	public int getCoste() {
 		int coste = 0;
 		if (diaDeLaSemana == DiaDeLaSemana.LUNES || 
 			diaDeLaSemana == DiaDeLaSemana.MARTES || 
@@ -26,11 +26,23 @@ public class ActividadSemanal {
 		return coste;
 	}
 
-	public Deporte getDeporte() {
-		return deporte;
+	public DiaDeLaSemana getDiaDeLaSemana() {
+		return diaDeLaSemana;
+	}
+	
+	public int getHora() {
+		return hora;
 	}
 
 	public int getDuracion() {
 		return duracion;
+	}
+	
+	public Deporte getDeporte() {
+		return deporte;
+	}
+	
+	public String toString() {
+		return "Deporte: " + getDeporte() + ". Dia: " + getDiaDeLaSemana() + " A LAS: " + getHora() + ". Duracion: " + getDuracion() + " hora(s).";
 	}
 }
